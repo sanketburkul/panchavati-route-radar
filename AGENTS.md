@@ -28,3 +28,6 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Application architecture
+- Keep route-independent navigation calculations and place data in reusable modules, and dynamically load map/browser APIs after hydration because TanStack Start renders routes on the server.
