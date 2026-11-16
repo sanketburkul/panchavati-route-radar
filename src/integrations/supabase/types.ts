@@ -14,7 +14,33 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      traffic_reports: {
+        Row: {
+          created_at: string
+          id: string
+          intensity: string
+          latitude: number
+          location_label: string | null
+          longitude: number
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          intensity: string
+          latitude: number
+          location_label?: string | null
+          longitude: number
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          intensity?: string
+          latitude?: number
+          location_label?: string | null
+          longitude?: number
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
